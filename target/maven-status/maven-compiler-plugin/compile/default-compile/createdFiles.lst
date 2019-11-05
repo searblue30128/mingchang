@@ -1,4 +1,5 @@
 com\mingchang\service\PersonServiceImpl.class
 com\mingchang\model\Person.class
+com\mingchang\controller\HomePageController.class
 com\mingchang\service\PersonService.class
 com\mingchang\controller\PersonController.class
