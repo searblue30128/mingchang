@@ -1,4 +1,5 @@
 <!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -23,8 +24,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-          <img src="http://placehold.it/150x50?text=Logo" alt="">
-        </a>
+<!--           <img src="http://placehold.it/150x50?text=Logo" alt=""> -->
+          <img src="<%=request.getContextPath()%>/resources/images/mingchangLogo.jpg" alt="" width="150px" height="100px" ">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,7 +53,7 @@
 
 <!-- Page Content -->
 <div class="container">
-  <h1 class="mt-4">Logo Nav by Start Bootstrap</h1>
+  <h1 class="mt-4">銘昶電子有限公司</h1>
   <p>The logo in the navbar is now a default Bootstrap feature in Bootstrap 4! Make sure to set the width and height of the logo within the HTML or with CSS. For best results, use an SVG image as your logo.</p>
 </div>
 <!-- /.container -->
