@@ -28,7 +28,7 @@
   <div class="container">
     <a class="navbar-brand" href="#">
 <!--           <img src="http://placehold.it/150x50?text=Logo" alt=""> -->
-          <img src="<%=request.getContextPath()%>/resources/images/apple-7.png" alt="" width="40px" height="40px" ">
+          <img src="<%=request.getContextPath()%>/resources/images/apple-7.png" alt="" width="40px" height="40px">
     </a>
     <font color="white" size="5" style="font-family:DFKai-sb;">銘昶電子有限公司</font>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,8 +59,296 @@
 <div class="container">
   <h1 class="mt-4" style="font-family:DFKai-sb;">首頁</h1>
   <p>最新消息</p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr align="left">
+        <th colspan="2" style="font-size:30px;">工廠設備</th>
+      </tr>
+    </thead>
+    
+    </table>
+    <!-- Category Card -->
+    <div class="row" id="ads">
+    <!-- fab picture -->
+    
+        <div class="col-md-4">
+	        <div class="card rounded">
+	            <div class="card-image">
+	                <span class="card-notify-badge">Price Reduced</span>
+	                <span class="card-notify-year">2018</span>
+	                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab01.png" alt="Alternate Text" />
+	            </div>
+	            <div class="card-image-overlay m-auto">
+	                <span class="card-detail-badge">Used</span>
+	                <span class="card-detail-badge">$22,000.00</span>
+	                <span class="card-detail-badge">8000 Kms</span>
+	            </div>
+	            <div class="card-body text-center">
+	                <div class="ad-title m-auto">
+	                    <h5>Honda Accord Hybrid LT</h5>
+	                </div>
+	                <a class="ad-btn" href="#">View</a>
+	            </div>
+	        </div>
+    	</div>
+    
+        <div class="col-md-4">
+	        <div class="card rounded">
+	            <div class="card-image">
+	                <span class="card-notify-badge">Price Reduced</span>
+	                <span class="card-notify-year">2018</span>
+	                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab02.png" alt="Alternate Text" />
+	            </div>
+	            <div class="card-image-overlay m-auto">
+	                <span class="card-detail-badge">Used</span>
+	                <span class="card-detail-badge">$22,000.00</span>
+	                <span class="card-detail-badge">8000 Kms</span>
+	            </div>
+	            <div class="card-body text-center">
+	                <div class="ad-title m-auto">
+	                    <h5>Honda Accord Hybrid LT</h5>
+	                </div>
+	                <a class="ad-btn" href="#">View</a>
+	            </div>
+	        </div>
+    	</div>
+    	
+    	<div class="col-md-4">
+	        <div class="card rounded">
+	            <div class="card-image">
+	                <span class="card-notify-badge">Price Reduced</span>
+	                <span class="card-notify-year">2018</span>
+	                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab03.png" alt="Alternate Text" />
+	            </div>
+	            <div class="card-image-overlay m-auto">
+	                <span class="card-detail-badge">Used</span>
+	                <span class="card-detail-badge">$22,000.00</span>
+	                <span class="card-detail-badge">8000 Kms</span>
+	            </div>
+	            <div class="card-body text-center">
+	                <div class="ad-title m-auto">
+	                    <h5>Honda Accord Hybrid LT</h5>
+	                </div>
+	                <a class="ad-btn" href="#">View</a>
+	            </div>
+	        </div>
+    	</div>
+    	
+    	<div class="col-md-4">
+	        <div class="card rounded">
+	            <div class="card-image">
+	                <span class="card-notify-badge">Price Reduced</span>
+	                <span class="card-notify-year">2018</span>
+	                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab04.png" alt="Alternate Text" />
+	            </div>
+	            <div class="card-image-overlay m-auto">
+	                <span class="card-detail-badge">Used</span>
+	                <span class="card-detail-badge">$22,000.00</span>
+	                <span class="card-detail-badge">8000 Kms</span>
+	            </div>
+	            <div class="card-body text-center">
+	                <div class="ad-title m-auto">
+	                    <h5>Honda Accord Hybrid LT</h5>
+	                </div>
+	                <a class="ad-btn" href="#">View</a>
+	            </div>
+	        </div>
+    	</div>
+    	
+    	<div class="col-md-4">
+	        <div class="card rounded">
+	            <div class="card-image">
+	                <span class="card-notify-badge">Price Reduced</span>
+	                <span class="card-notify-year">2018</span>
+	                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab05.png" alt="Alternate Text" />
+	            </div>
+	            <div class="card-image-overlay m-auto">
+	                <span class="card-detail-badge">Used</span>
+	                <span class="card-detail-badge">$22,000.00</span>
+	                <span class="card-detail-badge">8000 Kms</span>
+	            </div>
+	            <div class="card-body text-center">
+	                <div class="ad-title m-auto">
+	                    <h5>Honda Accord Hybrid LT</h5>
+	                </div>
+	                <a class="ad-btn" href="#">View</a>
+	            </div>
+	        </div>
+    	</div>
+    	
+    	<!-- origin car sample -->
+    	<div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">Low KMS</span>
+                <span class="card-notify-year">2018</span>
+                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" alt="Alternate Text" />
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge">Used</span>
+                <span class="card-detail-badge">$28,000.00</span>
+                <span class="card-detail-badge">13000 Kms</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
+                <a class="ad-btn" href="#">View</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">Fully-Loaded</span>
+                <span class="card-notify-year">2017</span>
+                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" alt="Alternate Text" />
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge">Used</span>
+                <span class="card-detail-badge">$28,000.00</span>
+                <span class="card-detail-badge">13000 Kms</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>Honda CIVIC HATCHBACK LS</h5>
+                </div>
+                <a class="ad-btn" href="#">View</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">Price Reduced</span>
+                <span class="card-notify-year">2018</span>
+                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge">Used</span>
+                <span class="card-detail-badge">$22,000.00</span>
+                <span class="card-detail-badge">8000 Kms</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>Honda Accord Hybrid LT</h5>
+                </div>
+                <a class="ad-btn" href="#">View</a>
+            </div>
+        </div>
+    </div>
+    	
+	</div>
 </div>
 <!-- /.container -->
 
 </body>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Category Ads */
+
+#ads {
+    margin: 30px 0 30px 0;
+   
+}
+
+#ads .card-notify-badge {
+        position: absolute;
+        left: -10px;
+        top: -20px;
+        background: #f2d900;
+        text-align: center;
+        border-radius: 30px 30px 30px 30px; 
+        color: #000;
+        padding: 5px 10px;
+        font-size: 14px;
+
+    }
+
+#ads .card-notify-year {
+        position: absolute;
+        right: -10px;
+        top: -20px;
+        background: #ff4444;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;      
+        font-size: 14px;      
+        width: 50px;
+        height: 50px;    
+        padding: 15px 0 0 0;
+}
+
+
+#ads .card-detail-badge {      
+        background: #f2d900;
+        text-align: center;
+        border-radius: 30px 30px 30px 30px;
+        color: #000;
+        padding: 5px 10px;
+        font-size: 14px;        
+    }
+
+   
+
+#ads .card:hover {
+            background: #fff;
+            box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+#ads .card-image-overlay {
+        font-size: 20px;
+        
+    }
+
+
+#ads .card-image-overlay span {
+            display: inline-block;              
+        }
+
+
+#ads .ad-btn {
+        text-transform: uppercase;
+        width: 150px;
+        height: 40px;
+        border-radius: 80px;
+        font-size: 16px;
+        line-height: 35px;
+        text-align: center;
+        border: 3px solid #e6de08;
+        display: block;
+        text-decoration: none;
+        margin: 20px auto 1px auto;
+        color: #000;
+        overflow: hidden;        
+        position: relative;
+        background-color: #e6de08;
+    }
+
+#ads .ad-btn:hover {
+            background-color: #e6de08;
+            color: #1e1717;
+            border: 2px solid #e6de08;
+            background: transparent;
+            transition: all 0.3s ease;
+            box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+        }
+
+#ads .ad-title h5 {
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+</style>
 </html>
+

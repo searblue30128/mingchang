@@ -28,7 +28,7 @@
   <div class="container">
     <a class="navbar-brand" href="#">
 <!--           <img src="http://placehold.it/150x50?text=Logo" alt=""> -->
-          <img src="<%=request.getContextPath()%>/resources/images/apple-7.png" alt="" width="40px" height="40px" ">
+          <img src="<%=request.getContextPath()%>/resources/images/apple-7.png" alt="" width="40px" height="40px">
     </a>
     <font color="white" size="5" style="font-family:DFKai-sb;">銘昶電子有限公司</font>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,9 @@
 <!-- Page Content -->
 <div class="container">
   <h1 class="mt-4" style="font-family:DFKai-sb;">聯繫我們</h1>
-  <p>最新消息</p>
+  <p>
+	  <img src="<%=request.getContextPath()%>/resources/images/mingchangLogo.jpg" alt="" width="400px" height="300px">
+  </p>
 </div>
 <!-- /.container -->
 

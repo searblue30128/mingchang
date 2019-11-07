@@ -28,7 +28,7 @@
   <div class="container">
     <a class="navbar-brand" href="#">
 <!--           <img src="http://placehold.it/150x50?text=Logo" alt=""> -->
-          <img src="<%=request.getContextPath()%>/resources/images/apple-7.png" alt="" width="40px" height="40px" ">
+          <img src="<%=request.getContextPath()%>/resources/images/apple-7.png" alt="" width="40px" height='40px'>
     </a>
     <font color="white" size="5" style="font-family:DFKai-sb;">銘昶電子有限公司</font>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,41 @@
 <!-- Page Content -->
 <div class="container">
   <h1 class="mt-4" style="font-family:DFKai-sb;">產品服務</h1>
-  <p>最新消息</p>
+	<table class="table table-striped">
+    <thead>
+      <tr align="left">
+        <th colspan="2" style="font-size:30px;">核心能量</th>
+      </tr>
+    </thead>
+    <tbody align="left">
+      <tr class="success" >
+        <td>SMT表面黏著代工</td>
+        <td>產品測試調整</td>
+      </tr>
+      <tr class="danger">
+        <td>DIP傳統插件代工</td>
+        <td>組裝產品</td>
+      </tr>
+      <tr class="info">
+        <td>無鉛製程</td>
+        <td>成品包裝</td>
+      </tr>
+      <tr class="warning">
+        <td>手焊加工</td>
+        <td>全製程代工服務</td>
+      </tr>
+    </tbody>
+    
+  </table>
+  
+    <table class="table table-striped">
+	    <thead>
+	      <tr align="left">
+	        <th colspan="2" style="font-size:30px;">產能</th>
+	      </tr>
+	    </thead>
+    </table>
+    <img src="<%=request.getContextPath()%>/resources/images/produce.png" alt="" width="600px" height="400px">
 </div>
 <!-- /.container -->
 
