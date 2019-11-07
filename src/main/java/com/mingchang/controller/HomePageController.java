@@ -15,9 +15,27 @@ public class HomePageController {
 	private PersonService personService;
 
 	@RequestMapping("/homepage")
-	public String listPeople(Map<String, Object> map) {
+	public String homepage(Map<String, Object> map) {
 
 		return "homepage";
+	}
+
+	@RequestMapping("/about")
+	public String about(Map<String, Object> map) {
+
+		return "about";
+	}
+
+	@RequestMapping("/service")
+	public String service(Map<String, Object> map) {
+
+		return "service";
+	}
+
+	@RequestMapping("/contact")
+	public String contact(Map<String, Object> map) {
+
+		return "contact";
 	}
 
 }

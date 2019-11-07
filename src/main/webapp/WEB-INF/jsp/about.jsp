@@ -36,13 +36,14 @@
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="<%=request.getContextPath()%>/homepage">Home
                 <span class="sr-only">(current)</span>
               </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/about">About</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="<%=request.getContextPath()%>/about">About
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<%=request.getContextPath()%>/service">Services</a>
@@ -57,7 +58,7 @@
 
 <!-- Page Content -->
 <div class="container">
-  <h1 class="mt-4" style="font-family:DFKai-sb;">首頁</h1>
+  <h1 class="mt-4" style="font-family:DFKai-sb;">關於我們</h1>
   <p>最新消息</p>
 </div>
 <!-- /.container -->
