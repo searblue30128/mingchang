@@ -16,7 +16,8 @@ public class HomePageController {
 
 	@RequestMapping("/homepage")
 	public String homepage(Map<String, Object> map) {
-
+		
+		// connect database way https://www.jetbrains.com/help/datagrip/how-to-connect-to-heroku-postgres.html
 		return "homepage";
 	}
 

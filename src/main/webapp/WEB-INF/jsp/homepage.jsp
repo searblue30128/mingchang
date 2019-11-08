@@ -77,7 +77,7 @@
 	            <div class="card-image">
 	                <span class="card-notify-badge">Price Reduced</span>
 	                <span class="card-notify-year">2018</span>
-	                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab01.png" alt="Alternate Text" />
+	                <a href="javascript:;"><img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab01.png" alt="Alternate Text" /></a>
 	            </div>
 	            <div class="card-image-overlay m-auto">
 	                <span class="card-detail-badge">Used</span>
