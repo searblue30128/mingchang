@@ -88,7 +88,7 @@
 	                <div class="ad-title m-auto">
 	                    <h5>Honda Accord Hybrid LT</h5>
 	                </div>
-	                <a class="ad-btn" href="#">View</a>
+	                <a class="ad-btn" href="javascript:;">View</a>
 	            </div>
 	        </div>
     	</div>
@@ -109,7 +109,7 @@
 	                <div class="ad-title m-auto">
 	                    <h5>Honda Accord Hybrid LT</h5>
 	                </div>
-	                <a class="ad-btn" href="#">View</a>
+	                <a class="ad-btn" href="javascript:;">View</a>
 	            </div>
 	        </div>
     	</div>
@@ -130,7 +130,7 @@
 	                <div class="ad-title m-auto">
 	                    <h5>Honda Accord Hybrid LT</h5>
 	                </div>
-	                <a class="ad-btn" href="#">View</a>
+	                <a class="ad-btn" href="javascript:;">View</a>
 	            </div>
 	        </div>
     	</div>
@@ -151,7 +151,7 @@
 	                <div class="ad-title m-auto">
 	                    <h5>Honda Accord Hybrid LT</h5>
 	                </div>
-	                <a class="ad-btn" href="#">View</a>
+	                <a class="ad-btn" href="javascript:;">View</a>
 	            </div>
 	        </div>
     	</div>
@@ -172,7 +172,7 @@
 	                <div class="ad-title m-auto">
 	                    <h5>Honda Accord Hybrid LT</h5>
 	                </div>
-	                <a class="ad-btn" href="#">View</a>
+	                <a class="ad-btn" href="javascript:;">View</a>
 	            </div>
 	        </div>
     	</div>
@@ -245,6 +245,18 @@
 <!-- /.container -->
 
 </body>
+
+<script>
+$(function(){
+	$(".ad-btn").click(function(url){
+		window.open('', 'View', config='height=500,width=500');
+// 		var open = window.open( '','temp','toolbar=no,menubar=no,resizable=no,titlebar=no,scrollbars=yes');
+// 		open.resizeTo(800,700);
+// 		open.moveTo(150,50);
+	});
+});
+</script>
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
