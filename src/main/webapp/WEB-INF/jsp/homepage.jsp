@@ -178,7 +178,29 @@
     	</div>
     	
     	<!-- origin car sample -->
-    	<div class="col-md-4">
+    <div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">Low KMS</span>
+                <span class="card-notify-year">2018</span>
+                <img class="img-fluid" src="https://i.imgur.com/Q8mzs8Y.jpg" alt="Alternate Text" />
+<!--                 <a href="https://imgur.com/Q8mzs8Y"><img src="https://i.imgur.com/Q8mzs8Y.jpg" title="source: imgur.com" /></a> -->
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge">Used</span>
+                <span class="card-detail-badge">$28,000.00</span>
+                <span class="card-detail-badge">13000 Kms</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
+                <a class="ad-btn" href="#">View</a>
+            </div>
+        </div>
+    </div>
+    	
+    <div class="col-md-4">
         <div class="card rounded">
             <div class="card-image">
                 <span class="card-notify-badge">Low KMS</span>
