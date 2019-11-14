@@ -37,25 +37,25 @@
 	  </servlet>
 	  <servlet-mapping>
 	    <servlet-name>HomePageController</servlet-name>
-	    <url-pattern>/*</url-pattern>
+	    <url-pattern>/homepage</url-pattern>
 	  </servlet-mapping>
-<!-- 	  <servlet-mapping> -->
-<!-- 	    <servlet-name>HomePageController</servlet-name> -->
-<!-- 	    <url-pattern>/homepage</url-pattern> -->
-<!-- 	  </servlet-mapping> -->
 	  
-<!-- 	  <servlet-mapping> -->
-<!-- 	    <servlet-name>HomePageController</servlet-name> -->
-<!-- 	    <url-pattern>/about</url-pattern> -->
-<!-- 	  </servlet-mapping> -->
+	  <servlet-mapping>
+	    <servlet-name>HomePageController</servlet-name>
+	    <url-pattern>/about</url-pattern>
+	  </servlet-mapping>
 	  
-<!-- 	  <servlet-mapping> -->
-<!-- 	    <servlet-name>HomePageController</servlet-name> -->
-<!-- 	    <url-pattern>/service</url-pattern> -->
-<!-- 	  </servlet-mapping> -->
+	  <servlet-mapping>
+	    <servlet-name>HomePageController</servlet-name>
+	    <url-pattern>/service</url-pattern>
+	  </servlet-mapping>
 	  
-<!-- 	  <servlet-mapping> -->
-<!-- 	    <servlet-name>HomePageController</servlet-name> -->
-<!-- 	    <url-pattern>/contact</url-pattern> -->
-<!-- 	  </servlet-mapping> -->
+	  <servlet-mapping>
+	    <servlet-name>HomePageController</servlet-name>
+	    <url-pattern>/contact</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	    <servlet-name>HomePageController</servlet-name>
+	    <url-pattern>/addImg</url-pattern>
+	  </servlet-mapping>
 </web-app>
