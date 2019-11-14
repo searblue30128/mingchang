@@ -33,6 +33,11 @@ public class HomePageController {
 		return "homepage";
 	}
 
+	@RequestMapping(value = "/addImg", method = RequestMethod.GET)
+	public String addImageCardPage(@ModelAttribute("imageCard") ImageCard imageCard) {
+		return "addImg";
+	}
+
 	@RequestMapping(value = "/addImg", method = RequestMethod.POST)
 	public String addImageCard(@ModelAttribute("imageCard") ImageCard imageCard) {
 
