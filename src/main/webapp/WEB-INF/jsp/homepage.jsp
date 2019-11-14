@@ -77,7 +77,7 @@
 		            <div class="card-image">
 		                <span class="card-notify-badge">${imageCard.name}</span>
 <!-- 		                <span class="card-notify-year">X</span> -->
-		                <a href="openInNewTab()"><img class="img-fluid" src="${imageCard.imgUrl}" alt="${imageCard.name}" /></a>
+		                <a onclick="openInNewTab()"><img class="img-fluid" src="${imageCard.imgUrl}" alt="${imageCard.name}" /></a>
 <%-- 		                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab05.png" alt="Alternate Text" /> --%>
 <!--                 <a href="https://imgur.com/Q8mzs8Y"><img src="https://i.imgur.com/Q8mzs8Y.jpg" title="source: imgur.com" /></a> -->
 <!-- <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" /> -->
@@ -90,7 +90,7 @@
 		                <div class="ad-title m-auto">
 		                    <h5>${imageCard.name}</h5>
 		                </div>
-		                <a class="ad-btn" href="openInNewTab()">View</a>
+		                <a class="ad-btn" onclick="openInNewTab()">View</a>
 		            </div>
 		        </div>
 	    	</div>
