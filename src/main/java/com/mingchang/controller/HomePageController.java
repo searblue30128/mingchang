@@ -1,23 +1,32 @@
 package com.mingchang.controller;
 
+import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mingchang.service.PersonService;
+import com.mingchang.model.ImageCard;
+import com.mingchang.service.ImageCardService;
 
 @Controller
 public class HomePageController {
 
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
-	private PersonService personService;
+	private ImageCardService imageCardService;
 
 	@RequestMapping("/homepage")
 	public String homepage(Map<String, Object> map) {
-		
-		// connect database way https://www.jetbrains.com/help/datagrip/how-to-connect-to-heroku-postgres.html
+
+		// connect database way
+		// https://www.jetbrains.com/help/datagrip/how-to-connect-to-heroku-postgres.html
+		List<ImageCard> listImageCard = imageCardService.listImageCard();
+		logger.debug(listImageCard.toString());
 		return "homepage";
 	}
 
