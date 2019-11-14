@@ -90,7 +90,7 @@
 		                <div class="ad-title m-auto">
 		                    <h5>${imageCard.name}</h5>
 		                </div>
-		                <a class="ad-btn" href="javascript:;">View</a>
+		                <a class="ad-btn" href="openNewPage()">View</a>
 		            </div>
 		        </div>
 	    	</div>
@@ -108,11 +108,17 @@
 $(function(){
 	$(".ad-btn").click(function(url){
 // 		window.open('', 'View', config='height=500,width=500');
-		var open = window.open( '','temp','toolbar=no,menubar=no,resizable=no,titlebar=no,scrollbars=yes');
-		open.resizeTo(800,700);
-		open.moveTo(150,50);
+// 		var open = window.open( '','temp','toolbar=no,menubar=no,resizable=no,titlebar=no,scrollbars=yes');
+// 		open.resizeTo(800,700);
+// 		open.moveTo(150,50);
 	});
 });
+
+function openNewPage(url) {
+	window.open('https://support.wwf.org.uk/earth_hour/index.php?type=individual','_blank' );
+}
+
+
 </script>
 
 <style>
