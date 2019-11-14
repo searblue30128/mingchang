@@ -37,9 +37,10 @@
                 <form:label path="description">Image description</form:label>
                 <form:input path="description" style="width: 60%;" />
                 <form:label path="imgUrl">Image imgUrl</form:label>
-                <form:input path="imgUrl" tyle="width: 60%;" />
+                <form:input path="imgUrl" style="width: 60%;" />
                 <form:label path="moreDetail">Image moreDetail</form:label>
-                <form:input path="moreDetail" tyle="width: 60%;" />
+                <form:input path="moreDetail" style="width: 60%;" />
+                <br>
                 <input type="submit" value="Add Image" class="btn"/>
             </form:form>
 
