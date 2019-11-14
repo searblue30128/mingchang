@@ -28,19 +28,19 @@
     <div class="row">
         <div class="span8 offset2">
             <div class="page-header">
-                <h1>Simple CRUD Page</h1>
+                <h1>Add Image Page</h1>
             </div>
             <form:form method="post" action="addImg" commandName="imageCard" class="form-vertical">
 
                 <form:label path="name">Image Name</form:label>
                 <form:input path="name" />
                 <form:label path="description">Image description</form:label>
-                <form:input path="description" />
+                <form:input path="description" style="width: 60%;" />
                 <form:label path="imgUrl">Image imgUrl</form:label>
-                <form:input path="imgUrl" />
+                <form:input path="imgUrl" tyle="width: 60%;" />
                 <form:label path="moreDetail">Image moreDetail</form:label>
-                <form:input path="moreDetail" />
-                <input type="submit" value="Add Person" class="btn"/>
+                <form:input path="moreDetail" tyle="width: 60%;" />
+                <input type="submit" value="Add Image" class="btn"/>
             </form:form>
 
 
