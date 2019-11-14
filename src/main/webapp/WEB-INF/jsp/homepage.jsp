@@ -71,6 +71,35 @@
     <!-- Category Card -->
     <div class="row" id="ads">
     <!-- fab picture -->
+        <c:forEach items="${imageCardList}" var="imageCard">
+            <tr>
+                <td>${person.lastName}, ${person.firstName}</td>
+                <td><form action="delete/${person.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
+            </tr>
+            
+	        <div class="col-md-4">
+		        <div class="card rounded">
+		            <div class="card-image">
+		                <span class="card-notify-badge">Price Reduced</span>
+		                <span class="card-notify-year">2018</span>
+		                <a href="javascript:;"><img class="img-fluid" src="${imageCard.imgUrl}" alt="${imageCard.name}" /></a>
+		            </div>
+		            <div class="card-image-overlay m-auto">
+		                <span class="card-detail-badge">Used</span>
+		                <span class="card-detail-badge">$22,000.00</span>
+		                <span class="card-detail-badge">8000 Kms</span>
+		            </div>
+		            <div class="card-body text-center">
+		                <div class="ad-title m-auto">
+		                    <h5>Honda Accord Hybrid LT</h5>
+		                </div>
+		                <a class="ad-btn" href="javascript:;">View</a>
+		            </div>
+		        </div>
+	    	</div>
+            
+        </c:forEach>
+    
     
         <div class="col-md-4">
 	        <div class="card rounded">

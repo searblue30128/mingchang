@@ -26,6 +26,7 @@ public class HomePageController {
 		// connect database way
 		// https://www.jetbrains.com/help/datagrip/how-to-connect-to-heroku-postgres.html
 		List<ImageCard> listImageCard = imageCardService.listImageCard();
+		map.put("imageCardList", listImageCard);
 		logger.debug(listImageCard.toString());
 		return "homepage";
 	}
