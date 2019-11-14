@@ -76,7 +76,7 @@
 		        <div class="card rounded">
 		            <div class="card-image">
 		                <span class="card-notify-badge">${imageCard.name}</span>
-		                <span class="card-notify-year">X</span>
+<!-- 		                <span class="card-notify-year">X</span> -->
 		                <a href="javascript:;"><img class="img-fluid" src="${imageCard.imgUrl}" alt="${imageCard.name}" /></a>
 <%-- 		                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab05.png" alt="Alternate Text" /> --%>
 <!--                 <a href="https://imgur.com/Q8mzs8Y"><img src="https://i.imgur.com/Q8mzs8Y.jpg" title="source: imgur.com" /></a> -->
@@ -107,10 +107,10 @@
 <script>
 $(function(){
 	$(".ad-btn").click(function(url){
-		window.open('', 'View', config='height=500,width=500');
-// 		var open = window.open( '','temp','toolbar=no,menubar=no,resizable=no,titlebar=no,scrollbars=yes');
-// 		open.resizeTo(800,700);
-// 		open.moveTo(150,50);
+// 		window.open('', 'View', config='height=500,width=500');
+		var open = window.open( '','temp','toolbar=no,menubar=no,resizable=no,titlebar=no,scrollbars=yes');
+		open.resizeTo(800,700);
+		open.moveTo(150,50);
 	});
 });
 </script>
