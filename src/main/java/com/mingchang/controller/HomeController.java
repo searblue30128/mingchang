@@ -60,7 +60,7 @@ public class HomeController {
 
 		imageCardService.addImageCard(imageCard);
 
-		return "redirect:/home/addImg/";
+		return "redirect:/home/";
 	}
 
 	@RequestMapping("/delete/{imgId}")
@@ -68,7 +68,7 @@ public class HomeController {
 
 		imageCardService.removeImageCard(imgId);
 
-		return "redirect:/home/addImg/";
+		return "redirect:/home/";
 	}
 
 	@RequestMapping("/about")
