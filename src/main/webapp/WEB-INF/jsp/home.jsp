@@ -5,6 +5,7 @@
 
 <html>
 <body>
+	<link rel="shortcut icon" href="<%=request.getContextPath()%>/resources/images/iconLogo.jpg" />
 <jsp:include page="header.jsp"/>
 
 <!-- Page Content -->
