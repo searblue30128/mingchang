@@ -47,7 +47,7 @@ public class HomeController {
 
 		imageCardService.addImageCard(imageCard);
 
-		return "addImg";
+		return "redirect:/home/addImg/";
 	}
 
 	@RequestMapping("/delete/{imgId}")
