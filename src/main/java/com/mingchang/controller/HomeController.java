@@ -15,14 +15,15 @@ import com.mingchang.model.ImageCard;
 import com.mingchang.service.ImageCardService;
 
 @Controller
-public class HomePageController {
+@RequestMapping("/home")
+public class HomeController {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private ImageCardService imageCardService;
 
-	@RequestMapping("/homepage")
+	@RequestMapping("/")
 	public String homepage(Map<String, Object> map) {
 
 		// connect database way
@@ -30,7 +31,7 @@ public class HomePageController {
 		List<ImageCard> listImageCard = imageCardService.listImageCard();
 		map.put("imageCardList", listImageCard);
 		logger.debug(listImageCard.toString());
-		return "homepage";
+		return "home";
 	}
 
 	@RequestMapping(value = "/addImg", method = RequestMethod.GET)

@@ -14,6 +14,7 @@ import com.mingchang.model.Person;
 import com.mingchang.service.PersonService;
 
 @Controller
+@RequestMapping("/people")
 public class PersonController {
 
 	@Autowired
