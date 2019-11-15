@@ -45,15 +45,12 @@ public class HomeController {
 	@RequestMapping(value = "/addImg", method = RequestMethod.POST)
 	public String addImageCard(@ModelAttribute("imageCard") ImageCard imageCard) {
 
-		logger.debug("debug" + imageCard.getId().toString());
 		logger.debug("debug" + imageCard.getName());
 		logger.debug("debug" + imageCard.getDescription());
 		logger.debug("debug" + imageCard.getMoreDetail());
-		logger.error("error" + imageCard.getId().toString());
 		logger.error("error" + imageCard.getName());
 		logger.error("error" + imageCard.getDescription());
 		logger.error("error" + imageCard.getMoreDetail());
-		logger.info("info" + imageCard.getId().toString());
 		logger.info("info" + imageCard.getName());
 		logger.info("info" + imageCard.getDescription());
 		logger.info("info" + imageCard.getMoreDetail());
