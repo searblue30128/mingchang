@@ -27,4 +27,9 @@
         <url-pattern>/</url-pattern>  <!-- /*在根目錄不能使用 -->
     </servlet-mapping>
     
+    <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>/resources/*</url-pattern> 
+    </servlet-mapping>
+    
 </web-app>

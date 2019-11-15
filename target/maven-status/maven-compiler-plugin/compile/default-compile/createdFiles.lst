@@ -1,5 +1,8 @@
 com\mingchang\service\PersonServiceImpl.class
+com\mingchang\model\ImageCard.class
 com\mingchang\model\Person.class
-com\mingchang\controller\HomePageController.class
+com\mingchang\service\ImageCardService.class
+com\mingchang\service\ImageCardServiceImpl.class
+com\mingchang\controller\HomeController.class
 com\mingchang\service\PersonService.class
 com\mingchang\controller\PersonController.class
