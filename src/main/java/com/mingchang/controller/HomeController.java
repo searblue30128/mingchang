@@ -54,6 +54,9 @@ public class HomeController {
 		logger.info("info" + imageCard.getName());
 		logger.info("info" + imageCard.getDescription());
 		logger.info("info" + imageCard.getMoreDetail());
+		System.out.println("sysout" + imageCard.getName());
+		System.out.println("sysout" + imageCard.getDescription());
+		System.out.println("sysout" + imageCard.getMoreDetail());
 
 		imageCardService.addImageCard(imageCard);
 
