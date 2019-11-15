@@ -14,7 +14,6 @@
   <h1 class="mt-4" style="font-family:DFKai-sb;">聯繫我們</h1>
   <p>
 	  <img src="<%=request.getContextPath()%>/resources/images/mingchangLogo.jpg" alt="" width="400px" height="300px">
-	  <img src="<%=request.getContextPath()%>/resources/images/apple-7.png" alt="" width="400px" height="300px">
   </p>
 </div>
 <!-- /.container -->
