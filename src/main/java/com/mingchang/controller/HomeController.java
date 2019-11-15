@@ -39,7 +39,7 @@ public class HomeController {
 	public String addImageCardPage(@ModelAttribute("imageCard") ImageCard imageCard, Map<String, Object> map) {
 		List<ImageCard> listImageCard = imageCardService.listImageCard();
 		map.put("imageCardList", listImageCard);
-		return "redirect:/addImg/";
+		return "addImg";
 	}
 
 	@RequestMapping(value = "/addImg", method = RequestMethod.POST)
