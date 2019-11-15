@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -35,8 +36,10 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/addImg", method = RequestMethod.GET)
-	public String addImageCardPage(@ModelAttribute("imageCard") ImageCard imageCard) {
-		return "addImg";
+	public String addImageCardPage(@ModelAttribute("imageCard") ImageCard imageCard, Map<String, Object> map) {
+		List<ImageCard> listImageCard = imageCardService.listImageCard();
+		map.put("imageCardList", listImageCard);
+		return "redirect:/addImg/";
 	}
 
 	@RequestMapping(value = "/addImg", method = RequestMethod.POST)
@@ -45,6 +48,14 @@ public class HomeController {
 		imageCardService.addImageCard(imageCard);
 
 		return "addImg";
+	}
+
+	@RequestMapping("/delete/{imgId}")
+	public String deletePerson(@PathVariable("imgId") Integer imgId) {
+
+		imageCardService.removeImageCard(imgId);
+
+		return "redirect:/addImg/";
 	}
 
 	@RequestMapping("/about")

@@ -32,6 +32,27 @@
             </form:form>
 
 
+
+	        <c:if  test="${!empty imageCardList}">
+                <h3>Image List</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>Image Name</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${imageCardList}" var="imageCard">
+                        <tr>
+                            <td>${imageCard.name}</td>
+                            <td><form action="delete/${imageCard.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </c:if>
+            
         </div>
     </div>
 </div>
