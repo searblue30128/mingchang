@@ -47,9 +47,9 @@ public class HomeController {
         String name = transferUTF8(imageCard.getName());
         imageCard.setName(name);
         String description = transferUTF8(imageCard.getDescription());
-        imageCard.setName(description);
+        imageCard.setDescription(description);
         String moreDetail = transferUTF8(imageCard.getMoreDetail());
-        imageCard.setName(moreDetail);
+        imageCard.setMoreDetail(moreDetail);
         imageCardService.addImageCard(imageCard);
         return "redirect:/home/";
     }
