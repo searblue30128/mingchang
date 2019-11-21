@@ -1,5 +1,6 @@
 package com.mingchang.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
@@ -43,7 +44,14 @@ public class HomeController {
 
     @RequestMapping(value = "/addImg", method = RequestMethod.POST)
     public String addImageCard(@ModelAttribute("imageCard") ImageCard imageCard) {
-        System.out.println("sysout" + imageCard.getName());
+        String name = "";
+        try {
+            name = new String(imageCard.getName().getBytes("ISO-8859-1"), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            System.out.println("namename" + e.toString());
+        }
+        System.out.println("sysout" + name);
         System.out.println("sysout" + imageCard.getDescription());
         System.out.println("sysout" + imageCard.getMoreDetail());
         System.out.println("sysout" + "給我中文");
