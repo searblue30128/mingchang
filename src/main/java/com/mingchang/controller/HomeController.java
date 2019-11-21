@@ -19,74 +19,56 @@ import com.mingchang.service.ImageCardService;
 @RequestMapping("/home")
 public class HomeController {
 
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@Autowired
-	private ImageCardService imageCardService;
+    @Autowired
+    private ImageCardService imageCardService;
 
-	@RequestMapping("/")
-	public String homepage(Map<String, Object> map) {
+    @RequestMapping("/")
+    public String homepage(Map<String, Object> map) {
+        // connect database way
+        // https://www.jetbrains.com/help/datagrip/how-to-connect-to-heroku-postgres.html
+        List<ImageCard> listImageCard = imageCardService.listImageCard();
+        map.put("imageCardList", listImageCard);
+        logger.debug(listImageCard.toString());
+        return "home";
+    }
 
-		// connect database way
-		// https://www.jetbrains.com/help/datagrip/how-to-connect-to-heroku-postgres.html
-		List<ImageCard> listImageCard = imageCardService.listImageCard();
-		map.put("imageCardList", listImageCard);
-		logger.debug(listImageCard.toString());
-		return "home";
-	}
+    @RequestMapping(value = "/addImg", method = RequestMethod.GET)
+    public String addImageCardPage(@ModelAttribute("imageCard") ImageCard imageCard, Map<String, Object> map) {
+        List<ImageCard> listImageCard = imageCardService.listImageCard();
+        map.put("imageCardList", listImageCard);
+        return "addImg";
+    }
 
-	@RequestMapping(value = "/addImg", method = RequestMethod.GET)
-	public String addImageCardPage(@ModelAttribute("imageCard") ImageCard imageCard, Map<String, Object> map) {
-		List<ImageCard> listImageCard = imageCardService.listImageCard();
-		map.put("imageCardList", listImageCard);
-		return "addImg";
-	}
+    @RequestMapping(value = "/addImg", method = RequestMethod.POST)
+    public String addImageCard(@ModelAttribute("imageCard") ImageCard imageCard) {
+        System.out.println("sysout" + imageCard.getName());
+        System.out.println("sysout" + imageCard.getDescription());
+        System.out.println("sysout" + imageCard.getMoreDetail());
+        System.out.println("sysout" + "給我中文");
+        imageCardService.addImageCard(imageCard);
+        return "redirect:/home/";
+    }
 
-	@RequestMapping(value = "/addImg", method = RequestMethod.POST)
-	public String addImageCard(@ModelAttribute("imageCard") ImageCard imageCard) {
+    @RequestMapping("/delete/{imgId}")
+    public String deletePerson(@PathVariable("imgId") Integer imgId) {
+        imageCardService.removeImageCard(imgId);
+        return "redirect:/home/";
+    }
 
-		logger.debug("debug" + imageCard.getName());
-		logger.debug("debug" + imageCard.getDescription());
-		logger.debug("debug" + imageCard.getMoreDetail());
-		logger.error("error" + imageCard.getName());
-		logger.error("error" + imageCard.getDescription());
-		logger.error("error" + imageCard.getMoreDetail());
-		logger.info("info" + imageCard.getName());
-		logger.info("info" + imageCard.getDescription());
-		logger.info("info" + imageCard.getMoreDetail());
-		System.out.println("sysout" + imageCard.getName());
-		System.out.println("sysout" + imageCard.getDescription());
-		System.out.println("sysout" + imageCard.getMoreDetail());
+    @RequestMapping("/about")
+    public String about(Map<String, Object> map) {
+        return "about";
+    }
 
-		imageCardService.addImageCard(imageCard);
+    @RequestMapping("/service")
+    public String service(Map<String, Object> map) {
+        return "service";
+    }
 
-		return "redirect:/home/";
-	}
-
-	@RequestMapping("/delete/{imgId}")
-	public String deletePerson(@PathVariable("imgId") Integer imgId) {
-
-		imageCardService.removeImageCard(imgId);
-
-		return "redirect:/home/";
-	}
-
-	@RequestMapping("/about")
-	public String about(Map<String, Object> map) {
-
-		return "about";
-	}
-
-	@RequestMapping("/service")
-	public String service(Map<String, Object> map) {
-
-		return "service";
-	}
-
-	@RequestMapping("/contact")
-	public String contact(Map<String, Object> map) {
-
-		return "contact";
-	}
-
+    @RequestMapping("/contact")
+    public String contact(Map<String, Object> map) {
+        return "contact";
+    }
 }
