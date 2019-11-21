@@ -47,6 +47,7 @@ public class HomeController {
         System.out.println("sysout" + imageCard.getDescription());
         System.out.println("sysout" + imageCard.getMoreDetail());
         System.out.println("sysout" + "給我中文");
+        imageCard.setMoreDetail("中文硬寫");
         imageCardService.addImageCard(imageCard);
         return "redirect:/home/";
     }
