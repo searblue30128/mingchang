@@ -44,18 +44,12 @@ public class HomeController {
 
     @RequestMapping(value = "/addImg", method = RequestMethod.POST)
     public String addImageCard(@ModelAttribute("imageCard") ImageCard imageCard) {
-        String name = "";
-        try {
-            name = new String(imageCard.getName().getBytes("ISO-8859-1"), "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-            System.out.println("namename" + e.toString());
-        }
-        System.out.println("sysout" + name);
-        System.out.println("sysout" + imageCard.getDescription());
-        System.out.println("sysout" + imageCard.getMoreDetail());
-        System.out.println("sysout" + "給我中文");
-        imageCard.setMoreDetail("中文硬寫");
+        String name = transferUTF8(imageCard.getName());
+        imageCard.setName(name);
+        String description = transferUTF8(imageCard.getDescription());
+        imageCard.setName(description);
+        String moreDetail = transferUTF8(imageCard.getMoreDetail());
+        imageCard.setName(moreDetail);
         imageCardService.addImageCard(imageCard);
         return "redirect:/home/";
     }
@@ -79,5 +73,16 @@ public class HomeController {
     @RequestMapping("/contact")
     public String contact(Map<String, Object> map) {
         return "contact";
+    }
+
+    private String transferUTF8(String str) {
+        String result = "";
+        try {
+            result = new String(str.getBytes("ISO-8859-1"), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            System.out.println(result + " 轉碼失敗 ");
+            e.printStackTrace();
+        }
+        return result;
     }
 }
