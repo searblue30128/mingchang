@@ -51,13 +51,13 @@ public class HomeController {
 		String moreDetail = transferUTF8(imageCard.getMoreDetail());
 		imageCard.setMoreDetail(moreDetail);
 		imageCardService.addImageCard(imageCard);
-		return "addImg";
+		return "redirect:/home/addImg";
 	}
 
 	@RequestMapping("/delete/{imgId}")
 	public String deletePerson(@PathVariable("imgId") Integer imgId) {
 		imageCardService.removeImageCard(imgId);
-		return "redirect:/home/";
+		return "redirect:/home/addImg";
 	}
 
 	@RequestMapping("/about")
