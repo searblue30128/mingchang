@@ -44,7 +44,7 @@
 		                <div class="ad-title m-auto">
 		                    <h5>${imageCard.name}</h5>
 		                </div>
-		                <a href="javascript:;" class="ad-btn" onclick="openInNewTab()">View</a>
+		                <a href="javascript:;" class="ad-btn" onclick="openInNewTab(${imageCard.id})">View</a>
 		            </div>
 		        </div>
 	    	</div>
@@ -68,8 +68,8 @@ $(function(){
 	});
 });
 
-function openInNewTab(url) {
-	url = "https://support.wwf.org.uk/earth_hour/index.php?type=individual";
+function openInNewTab(id) {
+	url = "https://mingchang.herokuapp.com/home/showDetail?imgId="+id;
 	var win = window.open(url, '_blank');
 	win.focus();
 }
