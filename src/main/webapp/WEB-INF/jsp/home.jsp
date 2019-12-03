@@ -69,7 +69,7 @@ $(function(){
 });
 
 function openInNewTab(id) {
-	url = "https://mingchang.herokuapp.com/home/showDetail?imgId="+id;
+	url = "https://mingchang.herokuapp.com/home/showDetail/"+id;
 	var win = window.open(url, '_blank');
 	win.focus();
 }

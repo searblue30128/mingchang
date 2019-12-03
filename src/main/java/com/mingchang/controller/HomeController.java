@@ -4,6 +4,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.codec.binary.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,13 +64,13 @@ public class HomeController {
         return "redirect:/home/addImg";
     }
 
-    @RequestMapping(value = "/showDetail", method = RequestMethod.GET)
-    public String showDetailImageCardPage(@RequestParam(value = "imgId") Integer imgId, Map<String, Object> map) {
+    @RequestMapping(value = "/showDetail/{imgId}", method = RequestMethod.GET)
+    public String showDetailImageCardPage(@PathVariable String imgId, Map<String, Object> map) {
         System.out.println("imgId "+imgId);
         List<ImageCard> listImageCard = imageCardService.listImageCard();
         ImageCard imgCard = listImageCard
                                 .stream()
-                                .filter(obj -> obj.getId() == imgId)
+                                .filter(obj -> obj.getId().toString().equals(imgId))
                                 .findFirst()
                                 .get();
         map.put("imageCard", imgCard);
