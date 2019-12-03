@@ -60,19 +60,18 @@ public class HomeController {
         return "redirect:/home/addImg";
     }
 
-    @RequestMapping(value = "/showDetail", method = RequestMethod.GET)
-    public String showDetailImageCardPage(@ModelAttribute("imgId") Integer imgId, Map<String, Object> map) {
-        System.out.println("imgId "+imgId);
-        List<ImageCard> listImageCard = imageCardService.listImageCard();
-        ImageCard imgCard = listImageCard
-                                .stream()
-                                .filter(obj -> obj.getId() == imgId)
-                                .findFirst()
-                                .get();
-        map.put("imageCard", imgCard);
-        return "showDetail";
-    }
-
+    //    @RequestMapping(value = "/showDetail", method = RequestMethod.GET)
+    //    public String showDetailImageCardPage(@ModelAttribute("imgId") Integer imgId, Map<String, Object> map) {
+    //        System.out.println("imgId "+imgId);
+    //        List<ImageCard> listImageCard = imageCardService.listImageCard();
+    //        ImageCard imgCard = listImageCard
+    //                                .stream()
+    //                                .filter(obj -> obj.getId() == imgId)
+    //                                .findFirst()
+    //                                .get();
+    //        map.put("imageCard", imgCard);
+    //        return "showDetail";
+    //    }
     @RequestMapping("/about")
     public String about(Map<String, Object> map) {
         return "about";
