@@ -31,7 +31,7 @@
 		            <div class="card-image">
 		                <span class="card-notify-badge">${imageCard.name}</span>
 <!-- 		                <span class="card-notify-year">X</span> -->
-		                <a href="javascript:;" onclick="openInNewTab()"><img class="img-fluid" src="${imageCard.imgUrl}" alt="${imageCard.name}" /></a>
+		                <a href="javascript:;" onclick="openInNewTab(${imageCard.id})"><img class="img-fluid" src="${imageCard.imgUrl}" alt="${imageCard.name}" /></a>
 <%-- 		                <img class="img-fluid" src="<%=request.getContextPath()%>/resources/images/fab/fab05.png" alt="Alternate Text" /> --%>
 <!--                 <a href="https://imgur.com/Q8mzs8Y"><img src="https://i.imgur.com/Q8mzs8Y.jpg" title="source: imgur.com" /></a> -->
 <!-- <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" /> -->
