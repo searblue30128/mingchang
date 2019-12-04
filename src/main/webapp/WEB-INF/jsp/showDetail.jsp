@@ -26,7 +26,6 @@
                     <thead>
                     <tr>
                         <th>Image Name</th>
-                        <th>&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
