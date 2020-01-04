@@ -19,14 +19,13 @@
                 <h1>Show Detail Image Page</h1>
             </div>
 
-	        <c:if  test="${!empty imageCardList}">
+	        <c:if  test="${!empty imageCard}">
                 <h3>Image List</h3>
                 <img class="img-fluid" src="${imageCard.imgUrl}" alt="${imageCard.name}" />
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
                         <th>Image Name</th>
-                        <th>&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
