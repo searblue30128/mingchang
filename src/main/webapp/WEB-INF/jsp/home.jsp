@@ -14,14 +14,14 @@
   <h1 class="mt-4" style="font-family:DFKai-sb;">首頁</h1>
   <p>最新消息</p>
   
-  <table class="table table-striped">
-    <thead>
-      <tr align="left">
-        <th colspan="2" style="font-size:30px;">工廠設備</th>
-      </tr>
-    </thead>
+<!--   <table class="table table-striped"> -->
+<!--     <thead> -->
+<!--       <tr align="left"> -->
+<!--         <th colspan="2" style="font-size:30px;">工廠設備</th> -->
+<!--       </tr> -->
+<!--     </thead> -->
     
-    </table>
+<!--     </table> -->
     <!-- Category Card -->
     <div class="row" id="ads">
     <!-- fab picture -->
