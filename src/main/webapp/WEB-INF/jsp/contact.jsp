@@ -14,7 +14,8 @@
 <div class="container">
   <h1 class="mt-4" style="font-family:DFKai-sb;">聯繫我們</h1>
   <p>
-	  <img src="<%=request.getContextPath()%>/resources/images/mingchangLogo.jpg" alt="" >
+<%-- 	  <img src="<%=request.getContextPath()%>/resources/images/mingchangLogo.jpg" alt="" > --%>
+		<img src="${pageUrlForm.contact}" alt="" >
   </p>
 </div>
 <!-- /.container -->

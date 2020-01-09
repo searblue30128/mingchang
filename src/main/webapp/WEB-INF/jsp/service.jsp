@@ -52,7 +52,8 @@
      -->
     
     <p>
-	  <img src="<%=request.getContextPath()%>/resources/images/service01.jpg" alt="" >
+<%-- 	  <img src="<%=request.getContextPath()%>/resources/images/service01.jpg" alt="" > --%>
+		<img src="${pageUrlForm.service}" alt="" >
   	</p>
   	
 </div>

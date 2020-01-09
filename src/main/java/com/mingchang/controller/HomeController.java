@@ -44,17 +44,7 @@ public class HomeController {
     @RequestMapping(value = "/addImg", method = RequestMethod.GET)
     public String addImageCardPage(@ModelAttribute("imageCard") ImageCard imageCard, Map<String, Object> map) {
         List<ImageCard> listImageCard = imageCardService.listImageCard();
-        List<PageUrl> listPageUrl = pageUrlService.listPageUrl();
-        PageUrlForm pageUrlForm = new PageUrlForm();
-        for (PageUrl pageUrl : listPageUrl) {
-            if ("about".equals(pageUrl.getParam())) {
-                pageUrlForm.setAbout(pageUrl.getImgUrl());
-            } else if ("service".equals(pageUrl.getParam())) {
-                pageUrlForm.setService(pageUrl.getImgUrl());
-            } else if ("contact".equals(pageUrl.getParam())) {
-                pageUrlForm.setContact(pageUrl.getImgUrl());
-            }
-        }
+        PageUrlForm pageUrlForm = handlePageUrlForm(pageUrlService.listPageUrl());
         map.put("pageUrlForm", pageUrlForm);
         map.put("imageCardList", listImageCard);
         return "addImg";
@@ -113,17 +103,37 @@ public class HomeController {
 
     @RequestMapping("/about")
     public String about(Map<String, Object> map) {
+        PageUrlForm pageUrlForm = handlePageUrlForm(pageUrlService.listPageUrl());
+        map.put("pageUrlForm", pageUrlForm);
         return "about";
     }
 
     @RequestMapping("/service")
     public String service(Map<String, Object> map) {
+        PageUrlForm pageUrlForm = handlePageUrlForm(pageUrlService.listPageUrl());
+        map.put("pageUrlForm", pageUrlForm);
         return "service";
     }
 
     @RequestMapping("/contact")
     public String contact(Map<String, Object> map) {
+        PageUrlForm pageUrlForm = handlePageUrlForm(pageUrlService.listPageUrl());
+        map.put("pageUrlForm", pageUrlForm);
         return "contact";
+    }
+
+    private PageUrlForm handlePageUrlForm(List<PageUrl> listPageUrl) {
+        PageUrlForm pageUrlForm = new PageUrlForm();
+        for (PageUrl pageUrl : listPageUrl) {
+            if ("about".equals(pageUrl.getParam())) {
+                pageUrlForm.setAbout(pageUrl.getImgUrl());
+            } else if ("service".equals(pageUrl.getParam())) {
+                pageUrlForm.setService(pageUrl.getImgUrl());
+            } else if ("contact".equals(pageUrl.getParam())) {
+                pageUrlForm.setContact(pageUrl.getImgUrl());
+            }
+        }
+        return pageUrlForm;
     }
 
     @SuppressWarnings("unused")
