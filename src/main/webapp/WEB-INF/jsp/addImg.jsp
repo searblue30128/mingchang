@@ -56,9 +56,21 @@
                 </table>
             </c:if>
             
-            <h3>關於</h3>
+            <h3>分頁圖片連結設定</h3>
             <hr size="8px" align="center" width="100%">
-            
+            <form:form method="post" action="updatePageUrl" commandName="pageUrl" class="form-vertical">
+
+                <form:label path="about">關於</form:label><br>
+                <form:input path="about" value="${about}" style="width: 100%; height:30px;"/><br>
+                <br>
+                <form:label path="service">產品服務</form:label><br>
+                <form:input path="service" value="${service}" style="width: 100%; height:30px;"/><br>
+                <br>
+                <form:label path="contact">聯絡我們</form:label><br>
+                <form:input path="contact" value="${contact}" style="width: 100%; height:30px;"/><br>
+                <br>
+                <input type="submit" value="update url" class="btn"/>
+            </form:form>
         </div>
     </div>
 </div>
