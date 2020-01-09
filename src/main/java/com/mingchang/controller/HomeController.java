@@ -4,7 +4,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.codec.binary.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mingchang.model.ImageCard;
 import com.mingchang.model.PageUrl;
+import com.mingchang.model.PageUrlForm;
 import com.mingchang.service.ImageCardService;
 import com.mingchang.service.PageUrlService;
 
@@ -44,9 +44,17 @@ public class HomeController {
 	public String addImageCardPage(@ModelAttribute("imageCard") ImageCard imageCard, Map<String, Object> map) {
 		List<ImageCard> listImageCard = imageCardService.listImageCard();
 		List<PageUrl> listPageUrl = pageUrlService.listPageUrl();
+		PageUrlForm pageUrlForm = new PageUrlForm();
 		for (PageUrl pageUrl : listPageUrl) {
-			map.put(pageUrl.getParam(), pageUrl.getImgUrl());
+			if ("about".equals(pageUrl.getParam())) {
+				pageUrlForm.setAbout(pageUrl.getImgUrl());
+			} else if ("service".equals(pageUrl.getParam())) {
+				pageUrlForm.setService(pageUrl.getImgUrl());
+			} else if ("contact".equals(pageUrl.getParam())) {
+				pageUrlForm.setContact(pageUrl.getImgUrl());
+			}
 		}
+		map.put("pageUrlForm", pageUrlForm);
 		map.put("imageCardList", listImageCard);
 		return "addImg";
 	}
@@ -65,18 +73,12 @@ public class HomeController {
 		imageCardService.addImageCard(imageCard);
 		return "redirect:/home/addImg";
 	}
-	
+
 	@RequestMapping(value = "/updatePageUrl", method = RequestMethod.POST)
-	public String updatePageUrl(@ModelAttribute("about") String about, @ModelAttribute("service") String service, @ModelAttribute("contact") String contact) {
+	public String updatePageUrl(@ModelAttribute("pageUrlForm") PageUrlForm pageUrlForm) {
 		List<PageUrl> listPageUrl = pageUrlService.listPageUrl();
 		for (PageUrl pageUrl : listPageUrl) {
-			if("about".equals(pageUrl.getParam())){
-				pageUrl.setImgUrl(about);
-			}else if("service".equals(pageUrl.getParam())){
-				pageUrl.setImgUrl(service);
-			}else if("contact".equals(pageUrl.getParam())){
-				pageUrl.setImgUrl(contact);
-			}
+
 			pageUrlService.update(pageUrl);
 		}
 		return "redirect:/home/addImg";
@@ -117,6 +119,7 @@ public class HomeController {
 		return "contact";
 	}
 
+	@SuppressWarnings("unused")
 	private String transferUTF8(String str) {
 		String result = "";
 		try {
