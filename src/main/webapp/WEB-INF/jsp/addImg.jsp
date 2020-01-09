@@ -37,11 +37,11 @@
 
 
 	        <c:if  test="${!empty imageCardList}">
-                <h3>Image List</h3>
+                <h3>圖片清單列表</h3>
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                        <th>Image Name</th>
+                        <th>圖片名稱</th>
                         <th>&nbsp;</th>
                     </tr>
                     </thead>

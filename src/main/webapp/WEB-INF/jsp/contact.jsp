@@ -14,10 +14,18 @@
 <div class="container">
   <h1 class="mt-4" style="font-family:DFKai-sb;">聯繫我們</h1>
   <p>
-	  <img src="<%=request.getContextPath()%>/resources/images/mingchangLogo.jpg" alt="" width="400px" height="300px">
+	  <img src="<%=request.getContextPath()%>/resources/images/mingchangLogo.jpg" alt="" >
   </p>
 </div>
 <!-- /.container -->
 
 </body>
+
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
 </html>

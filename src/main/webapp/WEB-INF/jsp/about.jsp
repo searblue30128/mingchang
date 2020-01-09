@@ -13,6 +13,7 @@
 <!-- Page Content -->
 <div class="container">
   <h1 class="mt-4" style="font-family:DFKai-sb;">關於我們</h1>
+  <!--  
   <p>銘昶電子2005年成立，從事專業SMT表面黏著、DIP傳統插件之生產製造，
   	  本公司擁有優秀的經營團隊，秉持著『誠實苦幹，精益求精，堅持品質，轉型升級』
   	  的經營理念，追求企業永續經營及成長。
@@ -45,8 +46,20 @@
     
     </table>
     <img src="<%=request.getContextPath()%>/resources/images/promise.png" alt="" width="420px" height="400px">
+    -->
+    
+    <p>
+	  <img src="<%=request.getContextPath()%>/resources/images/about01.jpg" alt="" >
+  	</p>
 </div>
 <!-- /.container -->
 
 </body>
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
 </html>

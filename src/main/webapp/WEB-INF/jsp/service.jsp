@@ -13,6 +13,7 @@
 <!-- Page Content -->
 <div class="container">
   <h1 class="mt-4" style="font-family:DFKai-sb;">產品服務</h1>
+  <!-- 
 	<table class="table table-striped">
     <thead>
       <tr align="left">
@@ -48,8 +49,22 @@
 	    </thead>
     </table>
     <img src="<%=request.getContextPath()%>/resources/images/produce.png" alt="" width="600px" height="400px">
+     -->
+    
+    <p>
+	  <img src="<%=request.getContextPath()%>/resources/images/service01.jpg" alt="" >
+  	</p>
+  	
 </div>
 <!-- /.container -->
 
 </body>
+
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
 </html>
