@@ -12,7 +12,7 @@
 <!-- Page Content -->
 <div class="container">
   <h1 class="mt-4" style="font-family:DFKai-sb;">首頁</h1>
-  <p>最新消息</p>
+<!--   <p>最新消息</p> -->
   
 <!--   <table class="table table-striped"> -->
 <!--     <thead> -->

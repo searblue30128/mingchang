@@ -48,11 +48,14 @@ public class HomeController {
 
     @RequestMapping(value = "/addImg", method = RequestMethod.POST)
     public String addImageCard(@ModelAttribute("imageCard") ImageCard imageCard) {
-        String name = transferUTF8(imageCard.getName());
+//        String name = transferUTF8(imageCard.getName());
+        String name = (imageCard.getName());
         imageCard.setName(name);
-        String description = transferUTF8(imageCard.getDescription());
+//        String description = transferUTF8(imageCard.getDescription());
+        String description = (imageCard.getDescription());
         imageCard.setDescription(description);
-        String moreDetail = transferUTF8(imageCard.getMoreDetail());
+//        String moreDetail = transferUTF8(imageCard.getMoreDetail());
+        String moreDetail = (imageCard.getMoreDetail());
         imageCard.setMoreDetail(moreDetail);
         imageCardService.addImageCard(imageCard);
         return "redirect:/home/addImg";
