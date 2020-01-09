@@ -16,17 +16,19 @@
     <div class="row">
         <div class="span8 offset2">
             <div class="page-header">
-                <h1>Add Image Page</h1>
+                <h1>編輯頁面</h1>
             </div>
+            <h3>首頁</h3>
+            <hr size="8px" align="center" width="100%">
             <form:form method="post" action="addImg" commandName="imageCard" class="form-vertical">
 
-                <form:label path="name">Image Name</form:label><br>
+                <form:label path="name">圖片名稱</form:label><br>
                 <form:input path="name" style="width: 100%; height:30px;"/><br>
-                <form:label path="description">Image description</form:label><br>
+                <form:label path="description">圖片描述</form:label><br>
                 <form:textarea path="description" style="width: 100%;" /><br>
-                <form:label path="imgUrl">Image imgUrl</form:label><br>
+                <form:label path="imgUrl">圖片網址(ex: imgur)</form:label><br>
                 <form:input path="imgUrl" style="width: 100%; height:30px;" /><br>
-                <form:label path="moreDetail">Image moreDetail</form:label><br>
+                <form:label path="moreDetail">圖片備註</form:label><br>
                 <form:textarea path="moreDetail" style="width: 100%;" /><br>
                 <br>
                 <input type="submit" value="Add Image" class="btn"/>
@@ -53,6 +55,9 @@
                     </tbody>
                 </table>
             </c:if>
+            
+            <h3>關於</h3>
+            <hr size="8px" align="center" width="100%">
             
         </div>
     </div>
